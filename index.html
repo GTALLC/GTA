@@ -5,103 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Triangle Alliance</title>
     <style>
-        /* This section controls the look of the site */
         body { 
             font-family: "Times New Roman", Times, serif; 
+            margin: 0; 
+            padding: 0;
             display: flex; 
             flex-direction: column; 
             align-items: center; 
             justify-content: center; 
             min-height: 100vh; 
-            margin: 0; 
-            padding: 20px;
-            text-align: center; 
-            color: #000000;
-            
-            /* BACKGROUND IMAGE SETTINGS */
+            text-align: center;
             background-image: url('background.png'); 
             background-size: cover; 
             background-position: center;
             background-attachment: fixed;
-            background-color: #ffffff; /* Falls back to white if image fails */
+            background-color: #f0f0f0; 
         }
-
-        .company-title {
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 10px;
-            background: rgba(255,255,255,0.7); /* Makes text readable over background */
-            padding: 10px 20px;
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border: 2px solid #000;
+            max-width: 500px;
+            width: 90%;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 40px;
-            background: rgba(255,255,255,0.7);
-            padding: 5px;
-        }
-
-        form { 
-            text-align: left;
-            width: 100%; 
-            max-width: 450px; 
-            box-sizing: border-box;
-            background: rgba(255,255,255,0.9); /* Makes form stand out */
-            padding: 30px;
-            border: 1px solid #000;
-        }
-
-        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; }
-
+        h1 { font-size: 2.5rem; text-transform: uppercase; margin: 0; }
+        p { font-style: italic; margin-bottom: 30px; }
+        form { text-align: left; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
         input, textarea { 
-            width: 100%; 
-            padding: 12px; 
-            margin-bottom: 20px; 
-            border: 1px solid #000; 
-            font-family: "Times New Roman", Times, serif;
-            font-size: 1.1rem;
+            width: 100%; padding: 10px; margin-bottom: 20px; 
+            border: 1px solid #000; font-family: "Times New Roman", serif; 
             box-sizing: border-box;
         }
-
         button { 
-            background-color: #000; 
-            color: white; 
-            border: none; 
-            padding: 15px; 
-            width: 100%; 
-            font-size: 1.2rem; 
-            cursor: pointer; 
-            font-family: "Times New Roman", Times, serif;
-            text-transform: uppercase;
+            width: 100%; padding: 15px; background: #000; color: #fff; 
+            border: none; cursor: pointer; text-transform: uppercase;
+            font-family: "Times New Roman", serif; font-size: 1.1rem;
         }
-
-        footer { margin-top: 50px; font-size: 0.8rem; background: rgba(255,255,255,0.7); }
+        button:hover { background: #333; }
     </style>
 </head>
 <body>
 
-    <div class="company-title">Golden Triangle Alliance</div>
-    <div class="subtitle">Official Website Coming Soon</div>
+    <div class="container">
+        <h1>Golden Triangle Alliance</h1>
+        <p>Website Coming Soon</p>
 
-    <!-- Corrected Formspree Link -->
-    <form action="formspree.io" method="POST">
-        <label for="email">YOUR EMAIL ADDRESS</label>
-        <input type="email" id="email" name="email" required placeholder="email@example.com">
-        
-        <label for="message">HOW CAN WE HELP YOU?</label>
-        <textarea id="message" name="message" rows="6" required placeholder="Please enter your message here..."></textarea>
-        
-        <button type="submit">Send Message</button>
-    </form>
-
-    <footer>
-        &copy; 2025 Golden Triangle Alliance. All Rights Reserved.
-    </footer>
+        <form action="formspree.io" method="POST">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            
+            <label>Message</label>
+            <textarea name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
 </body>
 </html>
