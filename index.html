@@ -16,17 +16,17 @@
 /* PAGE */
 body {
     height: 100vh;
-    font-family: "Times New Roman", serif;
     background: url('background.png') center / cover no-repeat fixed;
     background-color: #000;
     color: #fff;
+    font-family: "Sabon", "Adobe Garamond Pro", "Garamond", "Times New Roman", serif;
 }
 
-/* MAIN TITLE */
+/* TITLE BLOCK */
 .title-block {
     position: fixed;
-    top: 30px;
-    left: 30px;
+    top: 32px;
+    left: 32px;
 }
 
 .title {
@@ -36,35 +36,39 @@ body {
 }
 
 .title-line {
-    width: 260px;
+    width: 100%;
     height: 2px;
     background: #fff;
-    margin: 10px 0;
+    margin: 10px 0 8px 0;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0.75;
 }
 
 /* CENTER SLOGAN */
 .center-slogan {
     position: fixed;
-    top: 50%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-style: italic;
+    letter-spacing: 1.2px;
     opacity: 0.9;
     text-align: center;
+    pointer-events: none;
 }
 
-/* CONTACT FORM */
+/* FORM CONTAINER */
 .form-container {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 32px;
+    right: 32px;
     width: 340px;
     opacity: 0;
     animation: fadeIn 2s ease forwards;
@@ -81,9 +85,9 @@ body {
 
 /* FORM */
 label {
-    font-weight: bold;
-    display: block;
+    font-weight: 600;
     margin-bottom: 6px;
+    display: block;
 }
 
 input, textarea {
@@ -109,15 +113,15 @@ button {
     border: none;
     font-size: 1rem;
     text-transform: uppercase;
-    cursor: pointer;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 button:hover {
     background: #ddd;
 }
 
-/* FADE-IN */
+/* FADE IN */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -132,16 +136,16 @@ button:hover {
 /* MOBILE */
 @media (max-width: 768px) {
     .title-block,
-    .form-container,
-    .center-slogan {
+    .center-slogan,
+    .form-container {
         position: static;
         transform: none;
         margin: 30px;
     }
 
     .center-slogan {
+        font-size: 2.4rem;
         text-align: left;
-        font-size: 2.2rem;
     }
 
     body {
@@ -153,19 +157,19 @@ button:hover {
 
 <body>
 
-<!-- TOP LEFT TITLE -->
+<!-- TOP LEFT -->
 <div class="title-block">
     <div class="title">Golden Triangle Alliance</div>
     <div class="title-line"></div>
     <div class="subtitle">Consulting Solutions</div>
 </div>
 
-<!-- CENTER SLOGAN -->
+<!-- SLOGAN -->
 <div class="center-slogan">
     Global Reach for Local Solutions
 </div>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <div class="form-container">
     <div class="contact-title">Contact</div>
 
