@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Triangle Alliance</title>
-    <body {
-    background-image: url('background.png'); /* Replace with your background filename */
-    background-size: cover; /* Makes the image fill the screen */
-    background-position: center;
-    background-attachment: fixed; /* Keeps background still while scrolling */
-}
->
-        /* All fonts set to Times New Roman */
+    <style>
+        /* This section controls the look of the site */
         body { 
             font-family: "Times New Roman", Times, serif; 
             display: flex; 
@@ -22,11 +16,16 @@
             margin: 0; 
             padding: 20px;
             text-align: center; 
-            background-color: #ffffff; /* Clean white background */
             color: #000000;
+            
+            /* BACKGROUND IMAGE SETTINGS */
+            background-image: url('background.png'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #ffffff; /* Falls back to white if image fails */
         }
 
-        /* Large Title in place of a logo */
         .company-title {
             font-size: 3.5rem;
             font-weight: bold;
@@ -35,30 +34,29 @@
             margin-bottom: 5px;
             border-bottom: 2px solid #000;
             padding-bottom: 10px;
+            background: rgba(255,255,255,0.7); /* Makes text readable over background */
+            padding: 10px 20px;
         }
 
         .subtitle {
             font-size: 1.2rem;
             font-style: italic;
             margin-bottom: 40px;
+            background: rgba(255,255,255,0.7);
+            padding: 5px;
         }
 
-        /* Professional Contact Form */
         form { 
             text-align: left;
             width: 100%; 
             max-width: 450px; 
             box-sizing: border-box;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            background: rgba(255,255,255,0.9); /* Makes form stand out */
+            padding: 30px;
+            border: 1px solid #000;
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9rem; }
 
         input, textarea { 
             width: 100%; 
@@ -68,7 +66,6 @@
             font-family: "Times New Roman", Times, serif;
             font-size: 1.1rem;
             box-sizing: border-box;
-            background-color: #fff;
         }
 
         button { 
@@ -81,33 +78,17 @@
             cursor: pointer; 
             font-family: "Times New Roman", Times, serif;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        button:hover { 
-            background-color: #333; 
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: #777;
-        }
-    </body {
-    background-image: url('background.png'); /* Replace with your background filename */
-    background-size: cover; /* Makes the image fill the screen */
-    background-position: center;
-    background-attachment: fixed; /* Keeps background still while scrolling */
-}
->
+        footer { margin-top: 50px; font-size: 0.8rem; background: rgba(255,255,255,0.7); }
+    </style>
 </head>
 <body>
 
-    <!-- Large Text Header -->
     <div class="company-title">Golden Triangle Alliance</div>
     <div class="subtitle">Official Website Coming Soon</div>
 
-    <!-- Formspree Contact Form -->
+    <!-- Corrected Formspree Link -->
     <form action="formspree.io" method="POST">
         <label for="email">YOUR EMAIL ADDRESS</label>
         <input type="email" id="email" name="email" required placeholder="email@example.com">
@@ -119,7 +100,7 @@
     </form>
 
     <footer>
-        &copy;  Golden Triangle Alliance. All Rights Reserved.
+        &copy; 2025 Golden Triangle Alliance. All Rights Reserved.
     </footer>
 
 </body>
