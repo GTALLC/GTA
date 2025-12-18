@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Triangle Alliance</title>
+    <style>
+        /* All fonts set to Times New Roman */
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px;
+            text-align: center; 
+            background-color: #ffffff; /* Clean white background */
+            color: #000000;
+        }
+
+        /* Large Title in place of a logo */
+        .company-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        /* Professional Contact Form */
+        form { 
+            text-align: left;
+            width: 100%; 
+            max-width: 450px; 
+            box-sizing: border-box;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        input, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid #000; 
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        button { 
+            background-color: #000; 
+            color: white; 
+            border: none; 
+            padding: 15px; 
+            width: 100%; 
+            font-size: 1.2rem; 
+            cursor: pointer; 
+            font-family: "Times New Roman", Times, serif;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        button:hover { 
+            background-color: #333; 
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Large Text Header -->
+    <div class="company-title">Golden Triangle Alliance</div>
+    <div class="subtitle">Official Website Coming Soon</div>
+
+    <!-- Formspree Contact Form -->
+    <form action="formspree.io" method="POST">
+        <label for="email">YOUR EMAIL ADDRESS</label>
+        <input type="email" id="email" name="email" required placeholder="email@example.com">
+        
+        <label for="message">HOW CAN WE HELP YOU?</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Please enter your message here..."></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        &copy; 2025 Golden Triangle Alliance. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
