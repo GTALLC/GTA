@@ -1,181 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Triangle Alliance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Triangle Alliance</title>
 
-    <style>
-        body { 
-            font-family: "Times New Roman", Times, serif; 
-            margin: 0; 
-            padding: 0;
-            min-height: 100vh;
-            background-image: url('background.png'); 
-            background-size: cover; 
-            background-position: center;
-            background-attachment: fixed;
-            background-color: #000;
-        }
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Title Block */
-        .title-block {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            color: #fff;
-            max-width: 600px;
-        }
+/* PAGE */
+body {
+    height: 100vh;
+    font-family: "Times New Roman", serif;
+    background: url('background.png') center / cover no-repeat fixed;
+    background-color: #000;
+    color: #fff;
+}
 
-        .title {
-            font-size: 2.4rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin: 0;
-            white-space: nowrap;
-        }
+/* MAIN TITLE */
+.title-block {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
 
-        .title-line {
-            width: 220px;
-            height: 2px;
-            background: #fff;
-            margin: 10px 0;
-        }
+.title {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        .subtitle {
-            font-size: 1.15rem;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-        }
+.title-line {
+    width: 260px;
+    height: 2px;
+    background: #fff;
+    margin: 10px 0;
+}
 
-        /* Center Slogan */
-        .center-slogan {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 2.6rem;
-            font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
-            font-style: italic;
-            letter-spacing: 1px;
-            opacity: 0.9;
-            text-align: center;
-            pointer-events: none;
-        }
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
-        /* Form */
-        .form-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 320px;
-            opacity: 0;
-            animation: fadeIn 1.8s ease forwards;
-            animation-delay: 0.8s;
-        }
+/* CENTER SLOGAN */
+.center-slogan {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-style: italic;
+    opacity: 0.9;
+    text-align: center;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* CONTACT FORM */
+.form-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 340px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
 
-        label {
-            display: block;
-            color: #fff;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+/* CONTACT TITLE */
+.contact-title {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #fff;
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-            font-family: "Times New Roman", serif;
-            box-sizing: border-box;
-        }
+/* FORM */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
 
-        input::placeholder,
-        textarea::placeholder {
-            color: #ccc;
-        }
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: inherit;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #fff;
-            color: #000;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-family: "Times New Roman", serif;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-        }
+input::placeholder,
+textarea::placeholder {
+    color: #ccc;
+}
 
-        button:hover {
-            background: #ddd;
-        }
+button {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
 
-        /* Mobile fallback */
-        @media (max-width: 768px) {
-            .form-container {
-                position: static;
-                margin: 60px auto;
-                width: 90%;
-            }
+button:hover {
+    background: #ddd;
+}
 
-            .title-block {
-                position: static;
-                margin: 30px;
-            }
+/* FADE-IN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-            .center-slogan {
-                position: static;
-                transform: none;
-                margin: 40px 20px;
-                font-size: 2rem;
-            }
+/* MOBILE */
+@media (max-width: 768px) {
+    .title-block,
+    .form-container,
+    .center-slogan {
+        position: static;
+        transform: none;
+        margin: 30px;
+    }
 
-            body {
-                background-attachment: scroll;
-            }
-        }
-    </style>
+    .center-slogan {
+        text-align: left;
+        font-size: 2.2rem;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="title-block">
-        <h1 class="title">Golden Triangle Alliance</h1>
-        <div class="title-line"></div>
-        <div class="subtitle">Consulting Solutions</div>
-    </div>
+<!-- TOP LEFT TITLE -->
+<div class="title-block">
+    <div class="title">Golden Triangle Alliance</div>
+    <div class="title-line"></div>
+    <div class="subtitle">Consulting Solutions</div>
+</div>
 
-    <div class="center-slogan">
-        Global Reach for Local Solutions
-    </div>
+<!-- CENTER SLOGAN -->
+<div class="center-slogan">
+    Global Reach for Local Solutions
+</div>
 
-    <div class="form-container">
-        <form action="https://formspree.io/f/maqwwbla" method="POST">
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="you@example.com" required>
+<!-- CONTACT FORM -->
+<div class="form-container">
+    <div class="contact-title">Contact</div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+    <form action="https://formspree.io/f/maqwwbla" method="POST">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required>
 
-            <button type="submit">Send</button>
-        </form>
-    </div>
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
 
 </body>
 </html>
